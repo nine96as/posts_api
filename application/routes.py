@@ -7,6 +7,11 @@ def hello():
         "name": "Posts API",
         "description": "Interact with the Posts API through the routes below.",
         "endpoints": [
-            "GET /"
+            "GET /",
+            "GET /posts",
+            "GET /posts/:id",
+            "POST /posts/:id",
+            "PATCH /posts/:id",
+            "DELETE /posts/:id"
         ]
     }), 200
