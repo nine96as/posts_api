@@ -10,7 +10,7 @@ class Post(db.Model):
     title = db.Column(db.String(100), nullable=False)
     content = db.Column(db.String(500), nullable=False)
     created_at = db.Column(db.DateTime, default=func.now())
-    last_modified = db.Column(db.DateTime, onupdate=func.utc_timestamp())
+    last_modified = db.Column(db.DateTime, onupdate=func.now())
 
     def __init__(self, title, content):
         self.title = title
