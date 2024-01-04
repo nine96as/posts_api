@@ -19,6 +19,6 @@ pytest-cov = "*"
 python_version = "3.12"
 
 [scripts]
-start = "python seed.py && python app.py"
+start = "python app.py"
 test = "ptw -- -v -rP"
 coverage = "pytest --cov-report term-missing --cov=."
