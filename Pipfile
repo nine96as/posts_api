@@ -11,6 +11,14 @@ flask-sqlalchemy = "*"
 psycopg2-binary = "*"
 
 [dev-packages]
+pytest = "*"
+pytest-watch = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.12"
+
+[scripts]
+start = "python seed.py && python app.py"
+test = "ptw -- -v -rP"
+coverage = "pytest --cov-report term-missing --cov=."
