@@ -13,7 +13,7 @@ The Posts API is a back-end server built using Python and Flask that allows for 
 
 ## Technologies Used
 
-- [Python] - version 3.12.1
+- [Python](https://www.python.org/) - version 3.12.1
 
 ## Setup
 
