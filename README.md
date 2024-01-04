@@ -36,7 +36,7 @@ pipenv install
 ```
 
 > [!important]
-> Please ensure you have the correct Python version listed in the [Technologies Used](#technologies-used) section.
+> Please ensure you are using the Python version listed in the [Technologies Used](#technologies-used) section.
 
 ## Configuration
 
