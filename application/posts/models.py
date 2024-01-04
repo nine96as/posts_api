@@ -16,7 +16,7 @@ class Post(db.Model):
         self.title = title
         self.content = content
 
-    def __repr__(self) -> str:
+    def __repr__(self):
         return f'Post(id: {self.id}, title: {self.name})'
 
     @property
@@ -25,6 +25,6 @@ class Post(db.Model):
             "id": self.id,
             "title": self.title,
             "content": self.content,
-            "created_at": self.created,
+            "created_at": self.created_at,
             "last_modified": self.last_modified
         }
