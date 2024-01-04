@@ -17,7 +17,7 @@ class Post(db.Model):
         self.content = content
 
     def __repr__(self):
-        return f'Post(id: {self.id}, title: {self.name})'
+        return f'Post(id: {self.id}, title: {self.title})'
 
     @property
     def json(self):
