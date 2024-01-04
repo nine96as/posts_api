@@ -21,4 +21,4 @@ python_version = "3.12"
 [scripts]
 start = "python app.py"
 test = "ptw -- -v -rP"
-coverage = "pytest --cov-report term-missing --cov=."
+coverage = "pytest --cov-report term-missing --cov=application"
