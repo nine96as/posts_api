@@ -25,18 +25,19 @@ def show(id):
 
 
 def create():
-    try:
-        title, content = request.json.values()
-        post = Post(title=title, content=content)
+    # try:
+        title, content, user_id = request.json.values()
+        post = Post(title=title, content=content, user_id=user_id)
 
         db.session.add(post)
+        db.session.flush()
         db.session.commit()
         
         return jsonify({
             "data": post.json
         }), 201
-    except:
-        raise exceptions.BadRequest(f'We could not process your request.')
+    # except:
+    #     raise exceptions.BadRequest(f'We could not process your request.')
 
 
 def update(id):
@@ -58,12 +59,12 @@ def update(id):
 
 
 def destroy(id):
-    try:
+    # try:
         post = Post.query.filter_by(id=id).first()
 
         db.session.delete(post)
         db.session.commit()
 
         return "Post Deleted", 204
-    except:
-        raise exceptions.NotFound(f'The inputted post was not found.')
+    # except:
+    #     raise exceptions.NotFound(f'The inputted post was not found.')
